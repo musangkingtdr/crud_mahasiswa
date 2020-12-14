@@ -14,7 +14,7 @@ def tambah():
     nim = input('Masukkan Nim (6 digit tanpa titik): ')
     if len(nim) != 8:
         print('nim salah')
-        Data.tambah()
+        tambah()
         quit()
     prodi = input('Masukkan Program Studi: ')
     j_kel = input('Pilih Jenis Kelamin (l/p): ')
@@ -24,7 +24,7 @@ def tambah():
         j_kel = 'Perempuan'
     else:
         print('pilihan salah')
-        Data.tambah()
+        tambah()
         quit()
     alamat = input('Masukkan alamat: ')
     sql = "insert into data(nama,nim,prodi,j_kel,alamat) values(%s,%s,%s,%s,%s)"
@@ -41,7 +41,7 @@ def ubah():
     nim = input('Masukkan Nim baru (6 digit tanpa titik): ')
     if len(nim) != 8:
         print('nim salah')
-        Data.tambah()
+        tambah()
         quit()
     prodi = input('Masukkan Program Studi baru: ')
     j_kel = input('Pilih Jenis Kelamin (l/p): ')
@@ -51,7 +51,7 @@ def ubah():
         j_kel = 'Perempuan'
     else:
         print('pilihan salah')
-        Data.tambah()
+        tambah()
         quit()
     alamat = input('Masukkan alamat baru: ')
     sql = "UPDATE data SET nama=%s,nim=%s,prodi=%s,j_kel=%s,alamat=%s WHERE id=%s"
